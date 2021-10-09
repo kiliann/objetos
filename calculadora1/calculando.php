@@ -1,29 +1,37 @@
 <?php
+//instaciamos la clase operaciones
 require 'operaciones.php';
 
-$operacion = new Calcular();
-//echo $_POST['numero1'];
+//recogemos los elementos del formulario en variables
 $numeroMayor = $_POST['numero1'];
-$numeroMenor = $_POST['numero2'];
+$numeroPequeño = $_POST['numero2'];
 
-    /*if ($numeroMayor > $numeroMenor){
-        $numeroMayor = $numeroMenor;
-        $numeroMenor = $numeroMayor;
+//inicializamos la clase
+$operacion = new Calcular($numeroMayor, $numeroPequeño);
 
-    }*/
+    //Comprobamos si el formulario envio algo
     if(isset($_POST['simbolo'])){
+
+       /* if ($numeroMayor < $numeroPequeño){
+            echo $numeroMayor = $numeroPequeño;
+            echo $numeroPequeño = $numeroMayor;
+            echo $numeroMayor.'  espacio   ';
+            echo $numeroPequeño.'    ';
+
+        }*/
+        //Vemos que simbolo envio para hacer las diferente operciones.
         if($_POST['simbolo']=='+'){
-            echo $operacion->sumar($numeroMayor,$numeroMenor);
+            echo 'El resultado es:'.$operacion->sumar();
             //echo $operacion;
         }
         if($_POST['simbolo']=='-'){
-            echo $operacion->restar($numeroMayor,$numeroMenor);
+            echo 'El resultado es:'.$operacion->restar();
         }
         if($_POST['simbolo']=='*'){
-            echo $operacion->multiplicar($numeroMayor,$numeroMenor);
+            echo 'El resultado es:'.$operacion->multiplicar();
         }
         if($_POST['simbolo']=='/'){
-            echo $operacion->dividir($numeroMayor,$numeroMenor);
+            echo 'El resultado es:'.$operacion->dividir();
         }
 
     }
