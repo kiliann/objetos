@@ -2,7 +2,7 @@
 <html lang="es" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Base de datos</title>
+    <title>Calculadora</title>
     <!-- Esta es la version 2 de la caluladora-->
 </head>
 <body>
